@@ -184,7 +184,7 @@ def main(dotrain):
             #ax.axis('off')
             k+=1
             plt.pause(5)
-            if (i+1)%5 == 0: # shows every five image in one window
+            if (i+1)%5 == 0: # showing every five images in one window of pyplot figure window (matplotlib)
                 fig_counter+=1
                 fig1 = plt.figure(fig_counter)
                 k=1
