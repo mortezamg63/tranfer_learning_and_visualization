@@ -190,4 +190,5 @@ def main(dotrain):
                 k=1
 
 if __name__ == '__main__':
-    main(False)
+    main(False)  # True for training
+                 # False for evaluation and visualization
