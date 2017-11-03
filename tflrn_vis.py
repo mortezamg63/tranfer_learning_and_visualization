@@ -176,7 +176,7 @@ def main(dotrain):
         fig_counter = 1
         fig1 = plt.figure(fig_counter)
         k=1
-        for i in range(num_of_images): # Splitting the channels as collecting them as image to show
+        for i in range(num_of_images): # Splitting the outputs and collecting them as three-channel images to show by matplotlib library
             subimg = (final_image[0,i*3:i*3+3,:,:]).T
             #splited_images.append(subimg)
             ax=fig1.add_subplot(5,1,k)
