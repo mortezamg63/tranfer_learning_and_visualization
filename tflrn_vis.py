@@ -54,10 +54,7 @@ def main(dotrain):
     model_conv = torchvision.models.resnet18(pretrained=True)
 
     use_gpu = torch.cuda.is_available()
-
-    if use_gpu:
-        model_conv = model_conv.cuda()
-
+    ############ number of train and validation data
     train_total_data = len(image_datasets['train'])
     val_total_data = len(image_datasets['val'])
 
@@ -68,6 +65,8 @@ def main(dotrain):
         num_ftrs = model_conv.fc.in_features
         model_conv.fc = torch.nn.Linear(num_ftrs,2)
 
+        if use_gpu:
+            model_conv = model_conv.cuda()
 
 
         ############### Train ####################
